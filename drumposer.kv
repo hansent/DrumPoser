@@ -1,0 +1,50 @@
+#:kivy 1.0
+
+<MainMenu>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        Button:
+            text: 'Compose new beat'
+            on_press: root.new_beat()
+        Button:
+            text: 'Load and edi beat'
+            on_press: root.app.goto_screen("load")
+        Button:
+            text: 'Teach me how to play a beat'
+            on_press: root.app.goto_screen("teachme")
+
+
+<EditorScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        
+        Button:
+            text: 'Bleh'
+        Button:
+            text: 'Back to Main'
+            on_press: root.app.goto_screen("menu")
+
+
+<LoadScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+     
+        Button:
+            text: 'Load Something'
+        Button:
+            text: 'Load Something Else'
+        Button:
+            text: 'Back to Main'
+            on_press: root.app.goto_screen("menu")
+
+
+<TeachMeScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text: 'Teach Me!'
+        Button:
+            text: 'Back to Main'
+            on_press: root.app.goto_screen("menu")
