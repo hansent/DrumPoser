@@ -8,7 +8,7 @@
             text: 'Compose new beat'
             on_press: root.new_beat()
         Button:
-            text: 'Load and edi beat'
+            text: 'Load and edit beat'
             on_press: root.app.goto_screen("load")
         Button:
             text: 'Teach me how to play a beat'
@@ -40,11 +40,30 @@
 
 
 <TeachMeScreen>:
-    BoxLayout:
-        orientation: 'vertical'
+	BoxLayout:
+		orientation: 'vertical'		
+	
+		BoxLayout:
+			orientation: 'horizontal'
+			
+			Label:
+				font_size: 24
+				text: 'Left Hand'
+			Label:
+				font_size: 24
+				text: 'Right Hand'
 
-        Label:
-            text: 'Teach Me!'
-        Button:
-            text: 'Back to Main'
-            on_press: root.app.goto_screen("menu")
+		BoxLayout:
+			orientation: 'horizontal'
+			
+			Label:
+				font_size: 24
+				text: 'Left Foot'
+			Label:
+				font_size: 24
+				text: 'Right Foot'
+
+		Button:
+			text: "Back to main"
+			on_press: root.app.goto_screen("menu")
+		
