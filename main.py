@@ -13,8 +13,6 @@ class AppScreen(FloatLayout):
 class EditorScreen(AppScreen):
     beat = ObjectProperty(None)
 
-class LoadScreen(AppScreen):
-    pass
 
 class TeachMeScreen(AppScreen):
     pass
@@ -30,7 +28,6 @@ class DrumPoserApp(App):
     def build(self):
         self.screens = {}
         self.screens["editor"] = EditorScreen(app=self)
-        self.screens["load"] = LoadScreen(app=self)
         self.screens["teachme"] = TeachMeScreen(app=self)
         self.screens["menu"] = MainMenu(app=self)
         self.root = FloatLayout()
