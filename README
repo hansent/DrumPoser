@@ -1,0 +1,25 @@
+DrumPoser 0.0.1 - By A.J. Venter
+GPL 3.0
+
+About: 
+DrumPoser is a musical composition tool for drummers.
+It is designed to compose beats in an easy but musically correct 
+manner which can then be exported into normal notation, replayed
+or saved internally. 
+DrumPoser is NOT a drum machine and wouldn't be very useful as one.
+It's designed to be used alongside (not instead off) a physical drum-set,
+either electronic or accoustic. 
+To this end DrumPoser includes a tool to help teach you to play your 
+composed beats correctly on the drumkit. 
+
+DrumPoser is multiplatform and supports several mobile devices. This is 
+particularly useful as it means for the first time Drummers can compose
+and work on beats while on the go - without having to work from memory to 
+paper - and then have those beats ready to learn when they are back at
+their kits.
+
+Status:
+This is a first and early pre-release intended to show the design
+and seek contribution. Do not consider it ready for production use yet.
+
+
