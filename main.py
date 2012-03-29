@@ -13,10 +13,11 @@ class AppScreen(FloatLayout):
 
 class EditorScreen(AppScreen):
     instrument_list_wid = ObjectProperty(None)
-    
+
     def draw_instrument_list(self):
-        label1 = Label(text='Open High Hat', font_size=70)
-        print "Attempting to programattically add to a KV generated interface"
+        print "resetting instrument list"
+        self.instrument_list_wid.clear_widgets()
+        label1 = Label(text='Open High Hat', font_size=20)
         self.instrument_list_wid.add_widget(label1)
 
     def init_editor(self):
@@ -42,7 +43,7 @@ class DrumPoserApp(App):
         self.root.clear_widgets()
         self.root.add_widget(self.screens[screen_name])
         if screen_name == 'editor':
-            EditorScreen().init_editor()
+            self.screens["editor"].init_editor()
             
   
 if __name__ == '__main__':
