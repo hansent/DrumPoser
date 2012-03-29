@@ -4,6 +4,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
+from kivy.uix.label import Label
 
 
 class AppScreen(FloatLayout):
@@ -11,18 +12,20 @@ class AppScreen(FloatLayout):
 
 
 class EditorScreen(AppScreen):
-    beat = ObjectProperty(None)
+    instrument_list_wid = ObjectProperty(None)
+    
+    def draw_instrument_list(self):
+        label1 = Label(text='Open High Hat')
+        self.instrument_list_wid.add_widget(label1)
 
+    def init_editor(self):
+        self.draw_instrument_list()
 
 class TeachMeScreen(AppScreen):
     pass
 
 class MainMenu(AppScreen):
-    def new_beat(self):
-        new_beat = {"name": "New Beat"}
-        self.app.screens["editor"].beat = new_beat
-        self.app.goto_screen("editor")
-
+    pass
 
 class DrumPoserApp(App):
     def build(self):
@@ -37,7 +40,9 @@ class DrumPoserApp(App):
     def goto_screen(self, screen_name):
         self.root.clear_widgets()
         self.root.add_widget(self.screens[screen_name])
-
+        if screen_name == 'editor':
+            EditorScreen().init_editor()
+            
   
 if __name__ == '__main__':
     DrumPoserApp().run()

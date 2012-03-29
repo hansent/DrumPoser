@@ -6,7 +6,7 @@
 
         Button:
             text: 'Beat Composer'
-            on_press: root.new_beat()
+            on_press: root.app.goto_screen("editor")
         Button:
             text: 'Beat Trainer'
             on_press: root.app.goto_screen("teachme")
@@ -81,17 +81,6 @@
                 size_hint: 0.25,1
                 id: instrument_list
                 orientation: 'vertical'
-                Label:
-                    text: 'Open High-Hat'
-                Label:
-                    text: 'Closed High-Hat'
-                Label: 
-                    text: 'High-hat pedal'
-                Label:
-                    text: 'Snare drum'
-                Label:
-                    text: 'Bass drum'
-                    
             
             BoxLayout:
                 
