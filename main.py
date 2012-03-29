@@ -15,7 +15,8 @@ class EditorScreen(AppScreen):
     instrument_list_wid = ObjectProperty(None)
     
     def draw_instrument_list(self):
-        label1 = Label(text='Open High Hat')
+        label1 = Label(text='Open High Hat', font_size=70)
+        print "Attempting to programattically add to a KV generated interface"
         self.instrument_list_wid.add_widget(label1)
 
     def init_editor(self):
